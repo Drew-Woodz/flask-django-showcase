@@ -1,19 +1,24 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>Flask TODO Apps</title>
-    </head>
-    <body>
-        <h1>TODO List</h1>
-        <from action="/add" methos="POST">
-            <input type="text" name="task" placeholder="New task">
-            <button type="submit">Add</button>
-        </from>
-        <ul>
-            {% for task in task %}
-                <li>{{ task }}
-                    <a href="{{ url_for('delete', task_id=loop.index0) }}">[Delete]</a>
-                </li>
-            {% endfor %}    
-        </ul>
-    </body>
+  <head>
+    <meta charset="utf-8" />
+    <title>Flask TODO App</title>
+  </head>
+  <body>
+    <h1>TODO List</h1>
+
+    <form action="/add" method="POST">  <!-- from -> form, methos -> method -->
+      <input type="text" name="task" placeholder="New task" />
+      <button type="submit">Add</button>
+    </form>
+
+    <ul>
+      {% for task in tasks %}           <!-- loop over tasks, not task -->
+        <li>
+          {{ task }}
+          <a href="{{ url_for('delete', task_id=loop.index0) }}">[Delete]</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </body>
 </html>
