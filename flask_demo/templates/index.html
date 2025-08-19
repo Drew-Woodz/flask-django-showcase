@@ -13,12 +13,12 @@
     </form>
 
     <ul>
-      {% for task in tasks %}           <!-- loop over tasks, not task -->
+        {% for task in tasks %}
         <li>
-          {{ task }}
-          <a href="{{ url_for('delete', task_id=loop.index0) }}">[Delete]</a>
+            {{ task.title }}
+            <a href="{{ url_for('delete', task_id=task.id) }}">[Delete]</a>
         </li>
-      {% endfor %}
+        {% endfor %}
     </ul>
   </body>
 </html>
