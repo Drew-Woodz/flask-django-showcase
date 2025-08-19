@@ -12,7 +12,7 @@ def index():
 def add():
     task = request.form.get('task')
     if task:
-        task.append(task)
+        tasks.append(task)
     return redirect(url_for('index'))
 
 @app.route('/delete/<int:task_id>')
