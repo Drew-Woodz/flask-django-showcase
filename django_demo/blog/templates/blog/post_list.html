@@ -1,0 +1,8 @@
+<h1>Blog Posts</h1>
+<ul>
+  {% for post in posts %}
+    <li><strong>{{ post.title }}</strong> — {{ post.body }}</li>
+  {% empty %}
+    <li>No posts yet.</li>
+  {% endfor %}
+</ul>
