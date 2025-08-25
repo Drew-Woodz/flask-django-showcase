@@ -4,7 +4,12 @@ Tiny Django app showing models, admin, migrations, and a public list view.
 
 https://github.com/Drew-Woodz/flask-django-showcase
 
+Built a Flask web app with SQLAlchemy and SQLite persistence. Implemented routes, Jinja templates, and a JSON endpoint.
+
+Built a Django blog demo using Django ORM, migrations, and the built-in admin. Implemented model, list view, and URL routing.
+
 ## Features
+
 
 - `Post` model with title, body, timestamp
 
@@ -15,6 +20,7 @@ https://github.com/Drew-Woodz/flask-django-showcase
 ## Project layout
 
 ```text
+
 
 django_demo/
 ├── manage.py
